@@ -1,0 +1,5 @@
+Thursday, 19 March 2021.
+
+My name is Lim Jun Yi with matrix number, 22004811/1. I am majoring in Data Science. This is my first time taking the Data Structure subject. At the moment, I am feeling excited about taking this subject. This is because Data Structure is an interesting and challenging course which will improve my programming skills.
+
+I acquired A+ for my previous Programming 1 course. It’s not too bad. So, I think I can manage to get A+ as well for this DS subject this term. In order to do well in the subject, I will do more algorithmic exercises from websites like LeetCode, HackerRank and Codewars to be more familiar with each algorithms introduced in this course. Wish me luck!!!
