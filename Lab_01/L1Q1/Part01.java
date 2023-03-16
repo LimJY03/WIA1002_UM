@@ -4,8 +4,7 @@ class Part01 {
 
     public static void main(String[] args) {
 
-        // System.out.println(load("./LimJunYi_22004811.txt"));        
-        System.out.println(load("/workspaces/WIA1002_UM/Lab_01/LimJunYi_22004811.txt"));        
+        System.out.println(load("/workspaces/WIA1002_UM/Lab_01/L1Q1/LimJunYi_22004811.txt"));
     }
 
     public static String load(String filepath) {

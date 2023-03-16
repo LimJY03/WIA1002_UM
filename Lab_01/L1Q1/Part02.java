@@ -3,7 +3,7 @@ import java.io.*;
 
 class Part02 {
 
-    protected static final String FILEPATH = "/workspaces/WIA1002_UM/Lab_01/LimJunYi_22004811.txt";
+    protected static final String FILEPATH = "/workspaces/WIA1002_UM/Lab_01/L1Q1/LimJunYi_22004811.txt";
 
     public static void main(String[] args) {
         
