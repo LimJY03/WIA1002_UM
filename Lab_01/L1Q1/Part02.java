@@ -1,20 +1,24 @@
 import java.util.Scanner;
 import java.io.*;
 
-protected class Part02 {
+class Part02 {
 
-    protected static final String FILEPATH = "LimJunYi_22004811.txt";
+    protected static final String FILEPATH = "/workspaces/WIA1002_UM/Lab_01/LimJunYi_22004811.txt";
 
     public static void main(String[] args) {
         
-        PrintWriter fileOut = new PrintWriter(new FileWriter(FILEPATH));
-        Scanner sc = new Scanner(System.in);
-        String content = Part01.load(FILEPATH) + sc.nextLine();
+        String content = Part01.load(FILEPATH);
 
-        try { fileOut.println(content); }
+        try {
+            
+            PrintWriter fileOut = new PrintWriter(new FileWriter(FILEPATH));
+            Scanner sc = new Scanner(System.in);
+            content += sc.nextLine();
+
+            fileOut.println("\n" + content);
+            fileOut.close();
+        }
         catch (FileNotFoundException e) { System.out.println(e); }
         catch (IOException e) { System.out.printf("IOException: %s\n", e); }
-
-        fileOut.close();
     }
 }
