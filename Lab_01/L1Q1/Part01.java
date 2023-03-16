@@ -1,28 +1,36 @@
 import java.io.*;
 
-protected class Part01 {
+class Part01 {
 
     public static void main(String[] args) {
 
-        System.out.println(load("./LimJunYi_22004811.txt"));        
+        // System.out.println(load("./LimJunYi_22004811.txt"));        
+        System.out.println(load("/workspaces/WIA1002_UM/Lab_01/LimJunYi_22004811.txt"));        
     }
 
-    protected static String load(String filepath) {
+    public static String load(String filepath) {
         
-        BufferedReader fileIn = new BufferedReader(new FileReader(filepath));
-        String line = "";
-
+        String line = "", nextLine = "", result = "";
+        
         try {
-            // while ((line = fileIn.readLine()) != null) { System.out.printf("%s\n", line); }
+
+            BufferedReader fileIn = new BufferedReader(new FileReader(filepath));
+            
+            line = fileIn.readLine();
             while (true) {
-                try { line += fileIn.readline(); } catch (EOFException e) {}
+
+                nextLine = fileIn.readLine();
+
+                if ((line == null) && (nextLine == null)) break;
+
+                result += line + "\n";
+                line = nextLine;
             }
+            fileIn.close();
         }
         catch (FileNotFoundException e) { System.out.println(e); }
         catch (IOException e) { System.out.printf("IOException: %s\n", e); }
 
-        fileIn.close();
-
-        return line;
+        return result;
     }
 }
