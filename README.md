@@ -43,6 +43,16 @@ The file `README.md` documents some of the key takeaways in this lab. However, i
 
 ---
 
+## Running Java From Terminal
+
+```sh
+cd <FILEDIR_FOR_JAVAFILE>
+javac <CLASSNAME>.java
+java <CLASSNAME>
+```
+
+---
+
 ## Contribution
 
 Should you wish to contribute to this repository, feel free to create a pull request. To know more about pull request and how to do it, please refer to the following GitHub Documentations:
