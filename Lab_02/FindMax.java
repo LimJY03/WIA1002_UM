@@ -7,8 +7,8 @@ public class FindMax {
         Circle[] arr3 = {new Circle(3), new Circle(2.9), new Circle(5.9)};
 
         System.out.printf("Max in arr1: %s\n", max(arr1));
-        System.out.printf("Max in arr1: %s\n", max(arr2));
-        System.out.printf("Max in arr1: %s\n", max(arr3));
+        System.out.printf("Max in arr2: %s\n", max(arr2));
+        System.out.printf("Max in arr3: %s\n", max(arr3));
     }
 
     public static <E extends Comparable<E>> E max(E[] list) {
