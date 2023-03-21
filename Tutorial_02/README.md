@@ -143,7 +143,7 @@ Declare a method header for generic method, `allTransportation` that returns not
 ## Solution (Q7)
 
 ```java
-public <?> void allTransportation(ArrayList<?> arr1, ArrayList<?> arr2)
+public void allTransportation(ArrayList<?> arr1, ArrayList<?> arr2)
 ```
 
 # Question 08
@@ -160,7 +160,7 @@ Using the `<?>` wildcard, implement a generic method that displays the list.
 ## Solution (Q8)
 
 ```java
-public <?> void display(ArrayList<?> arr) {
+public void display(ArrayList<?> arr) {
     for (int i = 0; i < arr.size(); i++) { System.out.printf("%s ", arr.get(i)); }
     System.out.println();
 }
