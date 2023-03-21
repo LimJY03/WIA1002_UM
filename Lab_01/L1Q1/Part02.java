@@ -17,6 +17,7 @@ class Part02 {
 
             fileOut.println("\n" + content);
             fileOut.close();
+            sc.close();
         }
         catch (FileNotFoundException e) { System.out.println(e); }
         catch (IOException e) { System.out.printf("IOException: %s\n", e); }
