@@ -5,7 +5,7 @@ public class CompareMax {
         T result = a;
 
         if (c.compareTo(result) > 0) result = c;
-        else if (b.compareTo(result) > 0) result = b;
+        if (b.compareTo(result) > 0) result = b;
         
         return result;
     }
