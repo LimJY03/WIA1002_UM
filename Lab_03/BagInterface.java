@@ -80,4 +80,11 @@ public interface BagInterface<T> {
      * @return the intersect of the current bag and the parameter bag
      */
     public BagInterface<T> intersect(BagInterface<T> bag);
+
+    /**
+     * Return the current bag - parameter bag
+     * @param bag the bag to be subtracted
+     * @return the subtraction of the current bag and the parameter bag
+     */
+    public BagInterface<T> difference(BagInterface<T> bag);
 }
