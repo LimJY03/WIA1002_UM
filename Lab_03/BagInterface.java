@@ -62,8 +62,22 @@ public interface BagInterface<T> {
     public boolean contains(T anEntry);
 
     /** 
-     * Retrieves all entries that are in this bag
+     * Retrieves all entries that are in this bag.
      * @return a newly allocated array of all the entries in the bag 
      */
     public T[] toArray();
+
+    /**
+     * Return the combination of both bags.
+     * @param bag the bag to union with
+     * @return the union of the current bag and the parameter bag
+     */
+    public BagInterface<T> union(BagInterface<T> bag);
+
+    /**
+     * Return the intersection of both bags.
+     * @param bag the bag to intersect with
+     * @return the intersect of the current bag and the parameter bag
+     */
+    public BagInterface<T> intersect(BagInterface<T> bag);
 }
