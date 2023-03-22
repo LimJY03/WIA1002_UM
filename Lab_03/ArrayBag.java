@@ -1,8 +1,8 @@
 public class ArrayBag<T> implements BagInterface<T> {
-
-    T[] bag;
-    static final int DEFAULT_CAPACITY = 25;
-    int numberOfEntries;
+    
+    private T[] bag;
+    private static final int DEFAULT_CAPACITY = 25;
+    private int numberOfEntries;
 
     // Constructor
     public ArrayBag() {
@@ -66,7 +66,7 @@ public class ArrayBag<T> implements BagInterface<T> {
         return false;
     }
     public T[] toArray() { return this.bag; }
-    public ArrayBag<T> union(ArrayBag<T> bag) {
+    public BagInterface<T> union(BagInterface<T> bag) {
         
         ArrayBag<T> newBag = new ArrayBag<>(this.bag.length + bag.toArray().length);
         
@@ -74,24 +74,55 @@ public class ArrayBag<T> implements BagInterface<T> {
 
         T[] bag2 = bag.toArray();
 
-        for (int i = 0; i < bag2.length; i++) newBag.add(bag2[i]);
+        for (int i = 0; i < bag.getCurrentSize(); i++) newBag.add(bag2[i]);
 
         return newBag;
     }
-    public ArrayBag<T> interect(ArrayBag<T> bag) {
+    public BagInterface<T> intersect(BagInterface<T> bag) {
 
-        ArrayBag<T> newBag = new ArrayBag<>(this.bag.length + bag.toArray().length);
+        ArrayBag<T> newBag;
+        T[] bagArr = bag.toArray();
 
-        for (int i = 0; i < this.getCurrentSize(); i++) if (!newBag.contains(this.bag[i])) newBag.add(this.bag[i]);
-        
-        T[] bag2 = bag.toArray();
+        if (this.getCurrentSize() <= bag.getCurrentSize()) {
 
-        for (int i = 0; i < bag2.length; i++) if (!newBag.contains(bag2[i])) newBag.add(bag2[i]);
+            newBag = new ArrayBag<>(this.getCurrentSize());
+            
+            for (int i = 0; i < this.getCurrentSize(); i++) {
+
+                if (newBag.contains(this.bag[i])) continue;
+
+                int lowerFreq = Math.min(this.getFrequencyOf(this.bag[i]), bag.getFrequencyOf(this.bag[i]));
+
+                for (int j = 0; j < lowerFreq; j++) newBag.add(this.bag[i]);
+            }
+        }
+        else {
+
+            newBag = new ArrayBag<>(bag.getCurrentSize());
+            
+            for (int i = 0; i < bag.getCurrentSize(); i++) {
+
+                if (newBag.contains(bagArr[i])) continue;
+
+                int lowerFreq = Math.min(this.getFrequencyOf(bagArr[i]), bag.getFrequencyOf(bagArr[i]));
+
+                for (int j = 0; j < lowerFreq; j++) newBag.add(bagArr[i]);
+            }
+        }
 
         return newBag;
     }
+    public BagInterface<T> difference(BagInterface<T> bag) {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World");
+        ArrayBag<T> newBag = new ArrayBag<>(this.getCurrentSize());
+
+        // Copy
+        for (int i = 0; i < this.getCurrentSize(); i++) newBag.add(this.bag[i]);
+
+        T[] bagArr = bag.toArray();
+
+        for (int i = 0; i < bag.getCurrentSize(); i++) if (newBag.contains(bagArr[i])) newBag.remove(bagArr[i]);
+
+        return newBag;
     }
 }
