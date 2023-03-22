@@ -29,7 +29,7 @@ public class Telephone {
     static int numberOfTelephonebject;
 
     // Constructor
-    public Telephone(int areaCode, int number) {
+    public Telephone(String areaCode, String number) {
         this.areaCode = areaCode;
         this.number = number;
     }
@@ -37,9 +37,7 @@ public class Telephone {
     // Methods
     public String getAreaCode() { return this.areaCode; }
     public String getNumber() { return this.number; }
-    public String makeFullNumber() { 
-        return String.format("%s-%s", this.areaCode, this.number);
-    }
+    public String makeFullNumber() { return String.format("%s-%s", this.areaCode, this.number); }
 }
 
 class Tester {
@@ -54,9 +52,7 @@ class Tester {
             new Telephone("03", "79676304")
         };
 
-        for (Telephone t: arr) {
-            System.out.println(t.makeFullNumber());
-        }
+        for (Telephone t: arr) System.out.println(t.makeFullNumber());
     }
 }
 ```
@@ -178,9 +174,7 @@ public abstract class Vehicle {
     public double getCurrentSpeed() { return this.currentSpeed; }
     public double getMaxSpeed() { return this.maxSpeed; }
     public void pedalToTheMetal() {
-        while (this.getCurrentSpeed() < this.getMaxSpeed()) {
-            this.acclerate();
-        }
+        while (this.getCurrentSpeed() < this.getMaxSpeed()) this.acclerate();
     }   
 }
 ```
