@@ -4,9 +4,10 @@
 
 In this course, we will be learning data structures and algorithms using [**`Java`**](https://dev.java/learn/) language. There would be **at most 1** lab for each chapter in this course, and each lab would have some questions for students to try and solve using their coding skills.
 
-This repository stores my solutions for lab classes throughout this course.
+This repository stores my solutions for tutorial and lab classes throughout this course.
 
 ![last_update_shield](https://img.shields.io/badge/Last%20Update-March%202023-orange)
+
 <!-- 
 ---
 
