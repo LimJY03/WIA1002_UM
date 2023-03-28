@@ -5,10 +5,10 @@ public class TestLinkedList {
         MyLinkedList<Character> ll = new MyLinkedList<>();
         
         // Append the following : a, b, c, d, e
-        ll.addLast('a');
-        ll.addLast('b');
-        ll.addLast('c');
-        ll.addLast('d');
+        ll.addFirst('a');
+        ll.add(1, 'b');
+        ll.add(2, 'c');
+        ll.add(3, 'd');
         ll.addLast('e');
 
         // Print all the elements in the list
@@ -21,8 +21,8 @@ public class TestLinkedList {
         ll.indexOf(ll.getLast());
 
         // Retrieve the first and last value.
-        System.out.printf("First Element\n", ll.getFirst());
-        System.out.printf("Last Element\n", ll.getLast());
+        System.out.printf("First Element: %s\n", ll.getFirst());
+        System.out.printf("Last Element: %s\n", ll.getLast());
 
         // Delete the third value.
         System.out.println(ll.remove(2)); 
