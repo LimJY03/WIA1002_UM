@@ -2,7 +2,7 @@ public class MyLinkedList<E> {
     
     private Node<E> head;
     private Node<E> tail;
-    private int size = 0;
+    public int size = 0;
 
     // Constructor
     public MyLinkedList() {
@@ -48,9 +48,9 @@ public class MyLinkedList<E> {
             
             newNode.next = current.next;
             current.next = newNode;
-        }
 
-        this.size++;
+            this.size++;
+        }
     }
     public E removeFirst() {
 
