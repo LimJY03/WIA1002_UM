@@ -20,10 +20,6 @@ public class StorePairGeneric<T extends Comparable<T>> implements Comparable<Sto
     // Overriden Methods
     @Override
     public boolean equals(Object obj) { 
-        
-        if (obj == this) return true; 
-        if (!(obj instanceof StorePairGeneric)) return false;
-
         return this.first.equals(((StorePairGeneric<T>) obj).getFirst());
     }
     @Override
