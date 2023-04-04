@@ -8,11 +8,8 @@ public class L8Q1 {
     
     public static void main(String[] args) {
         
-        int[] arr = {4, 8, 1, 2, 9, 6, 3, 7};
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
-
-        // Filling items to queue
-        for (int num: arr) pq.add(num);
+        Integer[] arr = {4, 8, 1, 2, 9, 6, 3, 7};
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Arrays.asList(arr));
 
         // Displaying all the elements in the priority queue z
         System.out.println("Elements in the priority queue: " + pq.toString());
