@@ -2,6 +2,7 @@ package Lab_08;
 
 import java.util.PriorityQueue;
 import java.util.Collections;
+import java.util.Arrays;
 
 public class L8Q1 {
     
@@ -24,7 +25,7 @@ public class L8Q1 {
         System.out.println("Element 5 added to the priority queue");
 
         // Converting the priority queue into an array and displaying
-        System.out.println("Priority queue converted to an array: " + pq.toArray().toString());
+        System.out.println("Priority queue converted to an array: " + Arrays.toString(pq.toArray()));
 
         // Retrieving the first element in the priority queue
         System.out.println("First element retrieved (without removing): " + pq.peek());
@@ -40,7 +41,7 @@ public class L8Q1 {
         while (!pq.isEmpty()) System.out.println(pq.poll());
 
         // Sorting the priority queue in reverse order
-        PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(arr.length, Collections.reverseOrder());
+        PriorityQueue<Integer> pq2 = new PriorityQueue<Integer>(Collections.reverseOrder());
         for (int num: arr) pq2.add(num);
         System.out.println("Priority queue sorted in reverse order: " + pq2.toString());
     }
