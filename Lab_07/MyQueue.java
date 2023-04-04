@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class MyQueue<E> {
 
-    private LinkedList<E> queue = new LinkedList<>();
+    protected LinkedList<E> queue = new LinkedList<>();
     
     // Constructor
     public MyQueue() {}
