@@ -29,28 +29,32 @@ Your tasks are to design ADTs to represent the three classes:
 
 Instance variables:
 
-* `itemName`: the name of this item in the machine.
 * `itemCount`: the amount of items left in the machine.
 * `itemPrice`: the price of the product.
 
 Methods / Operations:
 
-* `dispense(itemCount)`: dispense an argument number of items from the machine and return the `itemPrice` * `itemCount`.
-* `refill(itemCount)`: refills an argument number of items into the machine.
+* `getCount()`: returns the number of products in the dispenser.
+* `getProductCost()`: returns the cost of the product.
+* `makeSale()`: dispense product.
+* `setCost()`: sets the price of the product.
+* `setItemCount()`: initialize the number of products in the dispenser.
 
 UML Class Diagram:
 
 ```java
-┌─────────────────────────────────────┐
-│              Dispenser              │
-├─────────────────────────────────────┤
-│ - itemName: String                  │
-│ - itemCount: int                    │
-│ - itemPrice: double                 │
-├─────────────────────────────────────┤
-│ + dispense(itemCount: int): double  │
-│ + refill(itemCount: int): void      │
-└─────────────────────────────────────┘
+┌─────────────────────────────┐
+│          Dispenser          │
+├─────────────────────────────┤
+│ - itemCount: int            │
+│ - itemPrice: double         │
+├─────────────────────────────┤
+│ + getCount(): int           │
+│ + getProductCost(): double  │
+│ + makeSale(): void          │
+│ + setCost(): void           │
+│ + setItemCount(): void      │
+└─────────────────────────────┘
 ```
 
 ### Cash Register
@@ -91,8 +95,6 @@ Methods:
 
 * `displayItem()`: display the different products sold by the candy machine.
 * `selectItem()`: returns the Dispenser object based on the item selected.
-* `payment(itemCount)`: calls the `cashIn()` method of the `Dispenser` object based on the item selected, and calls the `returnChange()` method.
-* `dispenseItem(itemCount)`: calls the `dispense()` method of the `Dispenser` object based on the item selected.
 
 UML Class Diagram:
 
@@ -108,8 +110,6 @@ UML Class Diagram:
 ├──────────────────────────────────────┤
 │ + displayItem(): void                │
 │ + selectItem(): Dispenser            │
-│ + payment(itemCount: int): void      │
-│ + dispenseItem(itemCount: int): void │
 └──────────────────────────────────────┘
 ```
 
