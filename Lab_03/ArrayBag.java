@@ -29,8 +29,8 @@ public class ArrayBag<T> implements BagInterface<T> {
 
         if (this.isEmpty()) return null;
 
-        T elem = this.bag[this.getCurrentSize()];
-        this.bag[this.getCurrentSize()] = null;
+        T elem = this.bag[this.getCurrentSize() - 1];
+        this.bag[this.getCurrentSize() - 1] = null;
         this.numberOfEntries--;
 
         return elem;
@@ -41,7 +41,8 @@ public class ArrayBag<T> implements BagInterface<T> {
         for (int i = 0; i < this.getCurrentSize(); i++) {
             if (this.bag[i] == anEntry) {
                 this.numberOfEntries--;
-                this.bag[i] = this.bag[this.getCurrentSize()];
+                this.bag[i] = this.bag[this.getCurrentSize() - 1];
+                this.bag[this.getCurrentSize() - 1] = null;
                 return true;
             }
         }
