@@ -132,6 +132,11 @@ class WeightedGraph<T extends Comparable<T>, N extends Comparable<N>> {
         return false;
     }
 
+    public boolean addUndirectedEdge(T v1, T v2, N w) {
+        if (this.addEdge(v1, v2, w)) return this.addEdge(v2, v1, w);
+        return false;
+    }
+
     public boolean hasEdge(T source, T destination) {
         if (head == null) return false;
         if (!hasVertex(source) || !hasVertex(destination)) return false;
