@@ -1,10 +1,4 @@
 public class Graph<T extends Comparable<T>, N extends Comparable<N>> extends WeightedGraph<T, N> {
-
-    Vertex<T, N> head;
-    int size = 0;
-    
-    // Constructor
-    public Graph() { head = null; }
     
     // Methods
     public boolean addEdge(T source, T destination) {
