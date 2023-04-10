@@ -1,12 +1,12 @@
 # WIA1002 (Data Structure)
 
-[**WIA1002**](https://spectrum.um.edu.my/course/view.php?id=146) is a core course introduced to Year 1 students in the [**Faculty of Computer Science and Information Technology (FCSIT)**](http://www.fsktm.um.edu.my/) of [**Universiti Malaya (UM)**](https://www.um.edu.my/), Malaysia.
+[**WIA1002**](https://spectrum.um.edu.my/course/view.php?id=146) is a programming core course with the prerequisite of [**WIX1002**](https://github.com/LimJY03/WIX1002_UM) introduced to Year 1 students in the [**Faculty of Computer Science and Information Technology (FCSIT)**](http://www.fsktm.um.edu.my/) of [**Universiti Malaya (UM)**](https://www.um.edu.my/), Malaysia.
 
 In this course, we will be learning data structures and algorithms using [**`Java`**](https://dev.java/learn/) language. There would be **at most 1** lab for each chapter in this course, and each lab would have some questions for students to try and solve using their coding skills.
 
 This repository stores my solutions for tutorial and lab classes throughout this course.
 
-![last_update_shield](https://img.shields.io/badge/Last%20Update-March%202023-orange)
+![last_update_shield](https://img.shields.io/badge/Last%20Update-April%202023-orange)
 
 ---
 
