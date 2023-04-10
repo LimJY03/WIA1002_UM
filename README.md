@@ -8,39 +8,52 @@ This repository stores my solutions for tutorial and lab classes throughout this
 
 ![last_update_shield](https://img.shields.io/badge/Last%20Update-March%202023-orange)
 
-<!-- 
 ---
 
 ## Repository Structure
 
-The repository contains multiple lab folders, each indicating the lab number. The directory diagram below shows the structure in each folder:
+The repository contains multiple lab folders, each indicating the lab number. The directory diagram below shows the structure in most folders:
 
 ```
-Lab #
+Lab_##
  ├─ L#Q#.java
  ├─ L#Q#.java
- ├─ L#Q#.java
- ├─ Question.pdf
- └─ README.md
+ └─ L#Q#.java
 ```
 
 > **Warning**
-> <br>The diagram above is not applicable for the folder `Lab 01`, `Lab 08`, `Lab 09` and `Problem Solving`.
+> <br>The diagram above is not applicable for certain folders.
 
-The `Lab #` parent folder refers to the lab number.
+The `Lab_##` parent folder refers to the lab number.
 
-* `Lab 02` refers to the Lab #2 in this course.
+* `Lab_02` refers to the Lab #2 in this course.
 
 The file `L#Q#.java` refers to a solution using `Java` for one question in the lab. There will be multiple numbers of `Java` file depending on the number of questions in the lab.
 
 * `L1Q2.java` refers to the solution for Lab **1**, Question **2**.
 
-The file `Question.pdf` stores the original lab question. Feel free to refer to this file to understand the question for each lab solutions.
+> **Note**
+> <br>The I/O files (if applicable) are included in the respective Lab Folder as well.
 
-The file `README.md` documents some of the key takeaways in this lab. However, it might not be present all the time.
+This repository also contains multiple tutorial folders, similar to lab folders, it also indicates the tutorial number. The directory diagram below shows the structure in most folders:
+
+```
+Tutorial_##
+ ├─ src
+ └─ README.md
+```
+
+> **Warning**
+> <br>The diagram above is not applicable for certain folders.
+
+Similar to the lab, the `Tutorial_##` parent folder refers to the lab number.
+
+* `Tutorial_02` refers to the Tutorial Question #2 in this course.
+
+The file `README.md` contains the question and solution for that tutorial using `Java`.
 
 > **Note**
-> <br>The output of some files are included in the respective Lab Folder as well. -->
+> <br>The `src` folder stores the relevant images that are rendered in the `README.md` file and it is not present in every tutorial parent folder.
 
 ---
 
