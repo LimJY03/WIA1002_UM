@@ -1,23 +1,23 @@
-public class Node<T> {
+public class LATNode<T> {
 
     private T value;            // Stores the value of the node
     private String edgeName1;   // Stores the name of second edge of the nod
     private String edgeName2;   // Stores the name of the first edge of the node
-    private Node<T> edgeNode1;  // Points to the first target node with edgeName1
-    private Node<T> edgeNode2;  // Points to the second target node with edgeName2
+    private LATNode<T> edgeNode1;  // Points to the first target node with edgeName1
+    private LATNode<T> edgeNode2;  // Points to the second target node with edgeName2
 
     // Constructor
-    public Node(T value) {
+    public LATNode(T value) {
         this.value = value;
     }
 
     // Methods
-    public void setEdge1(String edgeName, Node<T> node) {
+    public void setEdge1(String edgeName, LATNode<T> node) {
         this.edgeName1 = edgeName;
         this.edgeNode1 = node;
     }
     
-    public void setEdge2(String edgeName, Node<T> node) {
+    public void setEdge2(String edgeName, LATNode<T> node) {
         this.edgeName2 = edgeName;
         this.edgeNode2 = node;
     } 
@@ -36,7 +36,7 @@ public class Node<T> {
         System.out.println("-------------------------------------\n");
     }
 
-    public Node<T> traverse(String edgeName) {
+    public LATNode<T> traverse(String edgeName) {
         if (this.edgeName1 != null && edgeName.equals(this.edgeName1)) return edgeNode1;
         if (this.edgeName2 != null && edgeName.equals(this.edgeName2)) return edgeNode2;
         return null;

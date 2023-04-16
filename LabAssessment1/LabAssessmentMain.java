@@ -2,9 +2,9 @@ class LabAssessmentMain {
 
     public static void main(String[] args) {
             
-        Node<Person> anwarIbrahim = new Node<>(new Person("Anwar Ibrahim", 75));
-        Node<Person> wanAzizah = new Node<>(new Person("Wan Azizah", 70));
-        Node<Person> nurIzzah = new Node<>(new Person("Nur Izzah Anwar", 42));
+        LATNode<Person> anwarIbrahim = new LATNode<>(new Person("Anwar Ibrahim", 75));
+        LATNode<Person> wanAzizah = new LATNode<>(new Person("Wan Azizah", 70));
+        LATNode<Person> nurIzzah = new LATNode<>(new Person("Nur Izzah Anwar", 42));
         
         anwarIbrahim.setEdge1("wife", wanAzizah);
         anwarIbrahim.setEdge2("daughter", nurIzzah);

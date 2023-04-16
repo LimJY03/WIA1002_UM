@@ -2,12 +2,12 @@ public class LabAssessmentTest {
 
     public static void main(String[] args) {
 
-        Node<String> alice = new Node<>("Alice");
-        Node<String> bob = new Node<>("Bob");
-        Node<String> you = new Node<>("You");
-        Node<String> dave = new Node<>("Dave");
-        Node<String> elsa = new Node<>("Elsa");
-        Node<String> frank = new Node<>("Frank");
+        LATNode<String> alice = new LATNode<>("Alice");
+        LATNode<String> bob = new LATNode<>("Bob");
+        LATNode<String> you = new LATNode<>("You");
+        LATNode<String> dave = new LATNode<>("Dave");
+        LATNode<String> elsa = new LATNode<>("Elsa");
+        LATNode<String> frank = new LATNode<>("Frank");
 
         alice.setEdge1("friend", you);
         you.setEdge1("friend", alice);
