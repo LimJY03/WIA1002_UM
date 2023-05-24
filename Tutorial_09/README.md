@@ -13,13 +13,13 @@ Adjacency Matrix:
   ┌─                           ─┐
 A │  0  0  1  1  0  0  0  0  0  │
 B │  0  0  0  1  0  0  0  0  0  │
-C │  1  0  0  0  1  1  0  0  0  │
-D │  1  1  0  0  1  0  0  0  0  │
-E │  0  0  1  1  0  0  1  0  0  │
-F │  0  0  1  0  0  0  0  1  0  │
-G │  0  0  0  0  1  0  0  1  0  │
-H │  0  0  0  0  0  1  1  0  1  │
-I │  0  0  0  0  0  0  0  1  0  │
+C │  0  0  0  0  1  1  0  0  0  │
+D │  0  0  0  0  1  0  0  0  0  │
+E │  0  0  0  0  0  0  1  0  0  │
+F │  0  0  0  0  0  0  0  1  0  │
+G │  0  0  0  0  0  0  0  1  0  │
+H │  0  0  0  0  0  0  0  0  1  │
+I │  0  0  0  0  0  0  0  0  0  │
   └─                           ─┘
 ```
 
@@ -67,13 +67,13 @@ Adjacency Matrix.
 int[][] adjacencyMatrix = {
     { 0, 0, 1, 1, 0, 0, 0, 0, 0 },
     { 0, 0, 0, 1, 0, 0, 0, 0, 0 },
-    { 1, 0, 0, 0, 1, 1, 0, 0, 0 },
-    { 1, 1, 0, 0, 1, 0, 0, 0, 0 },
-    { 0, 0, 1, 1, 0, 0, 1, 0, 0 },
-    { 0, 0, 1, 0, 0, 0, 0, 1, 0 },
-    { 0, 0, 0, 0, 1, 0, 0, 1, 0 },
-    { 0, 0, 0, 0, 0, 1, 1, 0, 1 },
-    { 0, 0, 0, 0, 0, 0, 0, 1, 0 }
+    { 0, 0, 0, 0, 1, 1, 0, 0, 0 },
+    { 0, 0, 0, 0, 1, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0, 0, 1, 0, 0 },
+    { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+    { 0, 0, 0, 0, 0, 0, 0, 1, 0 },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 1 },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0 }
 };
 ```
 
@@ -86,13 +86,18 @@ Write code to create the graph using linked-list representation. You use the adj
 Adjacency List.
 
 ```java
-LinkedList<Vertex> listA = new LinkedList<>(); listA.addLast(A); listA.addLast(C); listA.addLast(D);
-LinkedList<Vertex> listB = new LinkedList<>(); listB.addLast(B); listB.addLast(D);
-LinkedList<Vertex> listC = new LinkedList<>(); listC.addLast(C); listC.addLast(E); listC.addLast(F);
-LinkedList<Vertex> listD = new LinkedList<>(); listD.addLast(D); listD.addLast(E);
-LinkedList<Vertex> listE = new LinkedList<>(); listE.addLast(E); listE.addLast(G);
-LinkedList<Vertex> listF = new LinkedList<>(); listF.addLast(F); listF.addLast(H);
-LinkedList<Vertex> listG = new LinkedList<>(); listG.addLast(G); listG.addLast(H);
-LinkedList<Vertex> listH = new LinkedList<>(); listH.addLast(H); listH.addLast(I);
-LinkedList<Vertex> listI = new LinkedList<>(); listI.addLast(I);
+String[] vertex = { "A", "B", "C", "D", "E", "F", "G", "H", "I" };
+
+for (String v: vertex) graph.addVertex(v);
+
+graph.addEdge("A", "C", 1);
+graph.addEdge("A", "D", 1);
+graph.addEdge("B", "D", 1);
+graph.addEdge("C", "E", 1);
+graph.addEdge("C", "F", 1);
+graph.addEdge("D", "E", 1);
+graph.addEdge("E", "G", 1);
+graph.addEdge("F", "H", 1);
+graph.addEdge("G", "H", 1);
+graph.addEdge("H", "I", 1);
 ```
