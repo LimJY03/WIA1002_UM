@@ -6,7 +6,7 @@ In this course, we will be learning data structures and algorithms using [**`Jav
 
 This repository stores my solutions for tutorial and lab classes throughout this course.
 
-![last_update_shield](https://img.shields.io/badge/Last%20Update-April%202023-orange)
+![last_update_shield](https://img.shields.io/badge/Last%20Update-June%202023-orange)
 
 ---
 
