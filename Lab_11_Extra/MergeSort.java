@@ -39,13 +39,13 @@ public class MergeSort {
 
         while (current <= high) {
 
-            // Left elem < right elem
+            // Right pointer reached end / leftElem < rightElem
             if (iLeftArr <= mid && (iRightArr > high || helper[iLeftArr] < helper[iRightArr])) {
                 arr[current] = helper[iLeftArr];
                 iLeftArr++;
             }
 
-            // Left elem > right elem
+            // Left pointer reached end / leftElem > rightElem
             else {
                 arr[current] = helper[iRightArr];
                 iRightArr++;
